@@ -49,7 +49,7 @@ def get_system_data(interface):
     cpu_usage = int(psutil.cpu_percent())
     mem_usage = int(psutil.virtual_memory().percent)
 
-    # Obtém o timestamp atual em microssegundos e ajusta para 32 bits
+    # Obtém o timestamp atual em microssegundos
     timestamp = int(time.time() * 1e6)
 
     return cpu_usage, mem_usage, timestamp
@@ -72,7 +72,7 @@ def main():
         cpu_usage, mem_usage, timestamp = get_system_data(iface)
 
         pkt = Ether(src=get_if_hwaddr(iface), dst="ff:ff:ff:ff:ff:ff") / IP(
-            src=source_ip,  # Define o IP de origem como 10.30.0.11
+            src=source_ip,  # Define o IP de origem
             dst=addr, 
             proto=254
         ) / HostINT(
