@@ -169,7 +169,7 @@ def handle_pkt(pkt):
                         if media < 5 and estado_sw1 == 1:
                             aumentar_sw1()
                             estado_sw1 = 0
-                        elif media > 20 and estado_sw1 == 0:
+                        elif media > 30 and estado_sw1 == 0:
                             diminuir_sw1()
                             estado_sw1 = 1
                     
@@ -181,7 +181,7 @@ def handle_pkt(pkt):
                         if media < 5 and estado_sw2 == 1:
                             aumentar_sw2()
                             estado_sw2 = 0
-                        elif media > 20 and estado_sw2 == 0:
+                        elif media > 30 and estado_sw2 == 0:
                             diminuir_sw2()
                             estado_sw2 = 1
                     
@@ -193,7 +193,7 @@ def handle_pkt(pkt):
                         if media < 5 and estado_sw3 == 1:
                             aumentar_sw3()
                             estado_sw3 = 0
-                        elif media > 20 and estado_sw3 == 0:
+                        elif media > 30 and estado_sw3 == 0:
                             diminuir_sw3()
                             estado_sw3 = 1
 
