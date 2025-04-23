@@ -121,7 +121,7 @@ def handle_pkt(pkt):
                         if media < 5 and estado == 1:
                             execute_commands_2()
                             estado = 0
-                        elif media > 20 and estado == 0:
+                        elif media > 30 and estado == 0:
                             execute_commands()
                             estado = 1
 
